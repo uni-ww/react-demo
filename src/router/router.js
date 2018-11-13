@@ -1,14 +1,14 @@
 import React from 'react';
 // import ReactDom from 'react-dom';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import App from '../App';
 
 const AllRouter = function(){
     return (
-        <HashRouter>
+        <Router>
             <Route path='/' component={App}></Route>
-        </HashRouter>
+        </Router>
     )
 }
 export default AllRouter;

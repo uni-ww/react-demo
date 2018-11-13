@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Router, Link} from 'react-router-dom';
+import { HashRouter as Router, Link} from 'react-router-dom';
 
 class TwoPage extends Component{
     constructor(props){
@@ -11,13 +11,13 @@ class TwoPage extends Component{
     }
     render(){
         return (
-            // <Router>
+            <Router>
                 <div>
                     <Link to="/onepage/3999999">goto </Link>
                     <h3>this is {this.state.txt}</h3>
                     <h3>id is : {this.state.id}</h3>
                 </div>
-            // </Router>
+            </Router>
         )
     }
 }

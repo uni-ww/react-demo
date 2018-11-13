@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import {HashRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link, NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 // import logo from './logo.svg';
 import './App.css';
 import Header from './layouts/header/header';
 import Index from './pages/index/index';
-import Control from './components/control/control';
-import Uncontrol from "./components/uncontrol/uncontrol";
+// import Control from './components/control/control';
+// import Uncontrol from "./components/uncontrol/uncontrol";
 
 import TwoPage from './pages/twopage/twopage';
 import OnePage from './pages/onepage/onepage';
@@ -55,14 +55,14 @@ class App extends Component {
         
         <Router>
           <div>
-            <Link to="/onepage">goto onepage</Link>
+            <NavLink to="/onepage" activeClassName="curr" replace>goto onepage</NavLink>
             <br/>
             <Route path='/onepage' component={OnePage}></Route>
-            <Link to='/twopage/2'>goto twopage</Link>
+            <Link to='/twopage/2' replace>goto twopage</Link>
             <Route path='/twopage/:id' component={TwoPage}></Route>
             <br/>
-            <Link to="/index">go to index</Link>
-            <Route path="/index" component={Index}></Route>
+            <Link to="/"  replace>go to index</Link>
+            <Route path="/" exact component={Index}></Route>
             <br/>
             {/* <Index name="哈哈哈哈" {...this.list} key={'list'} refreshList={this.refreshList} refreshTitle={this.refreshTitle} />
             <p className="App-intro" style={{ color: 'red' }}>
