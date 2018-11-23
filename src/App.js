@@ -55,7 +55,6 @@ class App extends Component {
         
         <Router>
           <div>
-              323
             <NavLink to="/onepage" activeClassName="curr" replace>goto onepage</NavLink>
             <br/>
             <Route path='/onepage' component={OnePage}></Route>
